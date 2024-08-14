@@ -1,38 +1,36 @@
-# nerc-images-template
+# vscode-rust
 
-An OpenShift AI Image for ...
+An OpenShift AI Image running VSCode for Rust development.
+- Based on the [Evcxr project](https://github.com/evcxr/evcxr)
+on GitHub for Jupyter Lab Notebook integration.
+- Uses Rust 1.79.
+- Used by Professor Leonidas Kontothanassis, MassMutual Professor of the
+Practice of Computing & Data Sciences + Director of Industry Engagement.
 
-Base image: [quay.io/...](https://github.com/...)
+Base image: [quay.io/opendatahub-contrib/workbench-images:vscode-datascience-c9s-py311_2023c_latest](https://github.com/opendatahub-io-contrib/workbench-images)
 
-| Python packages | Description |
+| Cargo packages | Description |
 | --- | --- |
-| jupyterlab | A web-based user interface to work with Jupyter notebooks, editors, terminals, and custom components |
+| evcxr_jupyter | An evaluation context for Rust. |
 
 | System packages | Description |
 | --- | --- |
-| something | ... |
+| cargo | Rust's package manager and build tool. |
 
-You can pull the latest [nerc-images-template container image](https://github.com/nerc-images/nerc-images-template/pkgs/container/nerc-images-template) below:
+You can pull the latest [vscode-rust container image](https://github.com/nerc-images/vscode-rust/pkgs/container/vscode-rust) below:
 
 ```
-podman pull quay.io/nerc-images/nerc-images-template:latest
+podman pull quay.io/nerc-images/vscode-rust:latest
 ```
 
-You can build the container like this: 
+Here is how to build the container image: 
 
 ```bash
-podman build -t nerc-images/nerc-images-template:latest .
+podman build -t nerc-images/vscode-rust:latest .
 ```
 
-You can run the container like this: 
+Here is how to run the container image: 
 
 ```bash
-podman run --rm -it --entrypoint /bin/bash nerc-images/nerc-images-template:latest
+podman run --rm -it --entrypoint /bin/bash nerc-images/vscode-rust:latest
 ```
-
-You can push the container to quay.io like this: 
-
-```bash
-podman push nerc-images/nerc-images-template:latest quay.io/nerc-images/nerc-images-template:latest
-```
-
